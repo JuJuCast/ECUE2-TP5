@@ -21,15 +21,17 @@ Le problème se trouve souvent entre le fauteuil et l'écran :)
 
 ## Partie 2
 
-**2.1** :
+**2.1** : Non, aucun setter n'a été écrit car la règle métier stipule qu'un auteur ne change ni de nom,
+            ni de prénom, ni de date de naissance après sa création.
 
-**2.2** :
+**2.2** : Il est préférable de le faire dans le constructeur pour limiter les erreurs de classes et autres
 
 ## Partie 3
 
-**3.1** :
+**3.1** : Si on mettait un setter sur le nombre de Disponible alors on prendrait le risque d'aoir trop de pas assez de livres dans le stocks,
+        car le nombre d'exemplaires lui n'aurait pas changé
 
-**3.2** :
+**3.2** : en appelant directement le setter dans le constructeur (setTitre(titre);)
 
 ## Partie 4
 

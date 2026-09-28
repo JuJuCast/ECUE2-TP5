@@ -8,7 +8,7 @@ import java.time.Period;
  * Il "marche"... à peu près.
  */
 public class Auteur {
-    public static String nom;
+    public String nom;
     public String prenom;
     public LocalDate dateNaissance;
 
@@ -16,10 +16,30 @@ public class Auteur {
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaissance = dateNaissance;
-    }
+        if (nom == null || nom.isBlank()) {
+            throw new IllegalArgumentException("Le nom est obligatoire");
+        }
+        if (dateNaissance == null || dateNaissance.isAfter(LocalDate.now())) {
+            throw new IllegalArgumentException("La date de naissance est obligatoire et ne peut pas être dans le futur");
+        }
 
+    }
     public String toString() {
         int age = Period.between(dateNaissance, LocalDate.now()).getYears();
         return prenom + " " + nom + " (" + age + " ans)";
+    }
+    public int getAge() {
+        return Period.between(dateNaissance, LocalDate.now()).getYears();
+    }
+    public String getNom() {
+        return nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public LocalDate getDateNaissance() {
+        return dateNaissance;
     }
 }
