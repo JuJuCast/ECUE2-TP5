@@ -35,7 +35,8 @@ Le problème se trouve souvent entre le fauteuil et l'écran :)
 
 ## Partie 4
 
-**4.1** :
+**4.1** :l'etape 4,5 et 6. Elles sont soient impossible (insérer un isbn sans setter) ou de définir un nombre de livres sans setter. 
+        Et tout cela vient du faite que ce soit en private
 
 **4.2** :
 
